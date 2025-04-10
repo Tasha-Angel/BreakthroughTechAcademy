@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+    <!-- 
+    Name: NASSUUNA NATASHA ANGELLA
+    Registration Number: 23/U/BIT/0523/K/DAY
+    Student Number: MRU2023000523
+    -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BreakThrough Tech Academy - Courses</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="courses-enhanced.css">
+    <script src="script.js" defer></script>
+    <script src="courses-script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>BreakThrough Tech Academy</h1>
+        </div>
+        <nav>
+            <button class="mobile-menu-btn" id="menuToggle" aria-label="Toggle navigation menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html" class="active">Courses</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <img src="webpics\webdpic5.PNG" width="50%" height="200px" >
+            <h2>Our Courses</h2>
+            <p>Comprehensive programs designed to launch your career in tech</p>
+        </section>
+
+        <section class="course-filters">
+            <div class="filter-container">
+                <label for="filterCourses">Filter by:</label>
+                <select id="filterCourses" aria-label="Filter courses by level">
+                    <option value="all">All Courses</option>
+                    <option value="beginner">Beginner Friendly</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </div>
+            <div class="search-container">
+                <input type="text" id="searchCourses" placeholder="Search courses..." aria-label="Search courses">
+                <button id="searchButton" aria-label="Search">Search</button>
+            </div>
+        </section>
+
+        <section class="courses-grid" id="coursesGrid">
+            <div class="course-card" data-level="beginner" data-course-id="web-dev-fundamentals">
+                <div class="course-image" style="background-color: #040e04;">
+                    <img src="webpics/webdpic.PNG" alt="Web Development Fundamentals course image" width="440" height="180">
+                </div>
+                <div class="course-content">
+                    <div class="course-level">Beginner</div>
+                    <h3>Web Development Fundamentals</h3>
+                    <p>Learn the core technologies that power the web: HTML, CSS, and JavaScript.</p>
+                    <ul class="course-details">
+                        <li><strong>Duration:</strong> 12 weeks</li>
+                        <li><strong>Format:</strong> Online & In-person</li>
+                        <li><strong>Projects:</strong> 5</li>
+                    </ul>
+                    <button class="course-cta" data-course="Web Development Fundamentals" data-description="Learn the core technologies that power the web: HTML, CSS, and JavaScript. This comprehensive course covers responsive design principles, DOM manipulation, and building interactive web pages. You'll complete 5 hands-on projects including a personal portfolio website and interactive web applications.">Learn More</button>
+                </div>
+            </div>
+
+            <div class="course-card" data-level="intermediate" data-course-id="full-stack-dev">
+                <div class="course-image" style="background-color: #03070a;">
+                    <img src="webpics/webdpic2.PNG" alt="Full-Stack Development course image" width="440" height="180">
+                </div>
+                <div class="course-content">
+                    <div class="course-level">Intermediate</div>
+                    <h3>Full-Stack Development</h3>
+                    <p>Master both front-end and back-end technologies to build complete web applications.</p>
+                    <ul class="course-details">
+                        <li><strong>Duration:</strong> 24 weeks</li>
+                        <li><strong>Format:</strong> Online & In-person</li>
+                        <li><strong>Projects:</strong> 8</li>
+                    </ul>
+                    <button class="course-cta" data-course="Full-Stack Development" data-description="Master both front-end and back-end technologies to build complete web applications. This intensive course covers React.js, Node.js, Express, and MongoDB/SQL databases. You'll learn authentication, API development, state management, and deployment strategies while completing 8 comprehensive projects including a fully functional e-commerce platform and social media application.">Learn More</button>
+                </div>
+            </div>
+
+            <div class="course-card" data-level="beginner" data-course-id="ux-ui-design">
+                <div class="course-image" style="background-color: #070503;">
+                    <img src="webpics/webpic4.PNG" alt="UX/UI Design Essentials course image" width="440" height="180">
+                </div>
+                <div class="course-content">
+                    <div class="course-level">Beginner</div>
+                    <h3>UX/UI Design Essentials</h3>
+                    <p>Develop skills in user-centered design, wireframing, and prototyping.</p>
+                    <ul class="course-details">
+                        <li><strong>Duration:</strong> 10 weeks</li>
+                        <li><strong>Format:</strong> Online & In-person</li>
+                        <li><strong>Projects:</strong> 4</li>
+                    </ul>
+                    <button class="course-cta" data-course="UX/UI Design Essentials" data-description="Develop skills in user-centered design, wireframing, and prototyping. This course covers design thinking methodologies, user research techniques, information architecture, and industry-standard tools like Figma and Adobe XD. You'll complete 4 portfolio-ready projects including a mobile app redesign and a complete web application user interface.">Learn More</button>
+                </div>
+            </div>
+
+            <div class="course-card" data-level="advanced" data-course-id="data-science-ml">
+                <div class="course-image" style="background-color: #09050a;">
+                    <img src="webpics/webdpic6.PNG" alt="Data Science & Machine Learning course image" width="440" height="180">
+                </div>
+                <div class="course-content">
+                    <div class="course-level">Advanced</div>
+                    <h3>Data Science & Machine Learning</h3>
+                    <p>Dive deep into data analysis, visualization, and predictive modeling.</p>
+                    <ul class="course-details">
+                        <li><strong>Duration:</strong> 28 weeks</li>
+                        <li><strong>Format:</strong> Online & In-person</li>
+                        <li><strong>Projects:</strong> 10</li>
+                    </ul>
+                    <button class="course-cta" data-course="Data Science & Machine Learning" data-description="Dive deep into data analysis, visualization, and predictive modeling. This comprehensive program covers Python, Pandas, NumPy, scikit-learn, TensorFlow, and deep learning fundamentals. You'll work on 10 real-world projects including sentiment analysis, image recognition, recommendation systems, and a capstone project solving an industry problem with machine learning.">Learn More</button>
+                </div>
+            </div>
+
+            <div class="course-card" data-level="intermediate" data-course-id="mobile-app-dev">
+                <div class="course-image" style="background-color: #070404;">
+                    <img src="webpics/webdpic7.PNG" alt="Mobile App Development course image" width="440" height="180">
+                </div>
+                <div class="course-content">
+                    <div class="course-level">Intermediate</div>
+                    <h3>Mobile App Development</h3>
+                    <p>Create native and cross-platform mobile applications for iOS and Android.</p>
+                    <ul class="course-details">
+                        <li><strong>Duration:</strong> 16 weeks</li>
+                        <li><strong>Format:</strong> Online & In-person</li>
+                        <li><strong>Projects:</strong> 6</li>
+                    </ul>
+                    <button class="course-cta" data-course="Mobile App Development" data-description="Create native and cross-platform mobile applications for iOS and Android. This course covers React Native, Flutter, Swift fundamentals, and app store deployment processes. You'll build 6 complete applications including a location-based service app, messaging platform, and a feature-rich productivity tool with offline capabilities and cloud synchronization.">Learn More</button>
+                </div>
+            </div>
+
+            <div class="course-card" data-level="advanced" data-course-id="cybersecurity">
+                <div class="course-image" style="background-color: #607D8B;">
+                    <img src="webpics/webdpic9.PNG" alt="Cybersecurity Professional course image" width="440" height="180">
+                </div>
+                <div class="course-content">
+                    <div class="course-level">Advanced</div>
+                    <h3>Cybersecurity Professional</h3>
+                    <p>Master the skills to protect systems and networks from digital attacks.</p>
+                    <ul class="course-details">
+                        <li><strong>Duration:</strong> 20 weeks</li>
+                        <li><strong>Format:</strong> Online & In-person</li>
+                        <li><strong>Projects:</strong> 7</li>
+                    </ul>
+                    <button class="course-cta" data-course="Cybersecurity Professional" data-description="Master the skills to protect systems and networks from digital attacks. This advanced program covers network security, ethical hacking, penetration testing, security analysis, and compliance frameworks. You'll complete 7 practical projects including vulnerability assessments, security audits, and building secure infrastructure for enterprise environments.">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="course-info">
+            <div class="info-card" style="background-color: skyblue;">
+                <h3>Learning Approach</h3>
+                <p>Our courses combine theoretical foundations with hands-on practice. You'll work on real-world projects that mimic industry challenges, receive personalized feedback, and build a professional portfolio.</p>
+            </div>
+            <div class="info-card" style="background-color: skyblue;">
+                <h3>Certification</h3>
+                <p>Upon successful completion of your course, you'll receive an industry-recognized certificate that validates your skills to potential employers.</p>
+            </div>
+            <div class="info-card" style="background-color: skyblue;">
+                <h3>Job Placement</h3>
+                <p>Our career services team works with you to polish your resume, prepare for interviews, and connect with our network of hiring partners.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Course Interest Modal -->
+    <div class="modal" id="courseModal">
+        <div class="modal-content">
+            <span class="close-button" id="closeCourseModal" aria-label="Close modal">&times;</span>
+            <h2 id="modalCourseTitle">Course Details</h2>
+            <div id="modalCourseDescription" class="course-description"></div>
+            
+            <form id="courseInterestForm" class="interest-form">
+                <input type="hidden" id="selectedCourse" name="selectedCourse">
+                
+                <div class="form-group">
+                    <label for="interestName">Full Name*</label>
+                    <input type="text" id="interestName" name="interestName" required aria-required="true">
+                </div>
+                
+                <div class="form-group">
+                    <label for="interestEmail">Email*</label>
+                    <input type="email" id="interestEmail" name="interestEmail" required aria-required="true">
+                </div>
+                
+                <div class="form-group">
+                    <label for="interestPhone">Phone Number</label>
+                    <input type="tel" id="interestPhone" name="interestPhone">
+                </div>
+                
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="scheduleCall" name="scheduleCall">
+                    <label for="scheduleCall">Schedule a consultation call</label>
+                </div>
+                
+                <div class="form-group">
+                    <label for="interestMessage">Questions/Comments</label>
+                    <textarea id="interestMessage" name="interestMessage" rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="cta-button">Submit Interest</button>
+            </form>
+            
+            <div id="formSubmissionMessage" class="submission-message"></div>
+        </div>
+    </div>
+    
+    <footer>
+        <style>/* Footer */
+            footer {
+                background-color: var(--dark);
+                color: white;
+                padding: 60px 0 20px;
+            }
+    
+            .footer-content {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 40px;
+                margin-bottom: 40px;
+            }
+    
+            .footer-logo {
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 20px;
+                color: white;
+            }
+    
+            .footer-logo span {
+                color: var(--secondary);
+            }
+    
+            .footer-about p {
+                margin-bottom: 20px;
+                color: var(--light-gray);
+            }
+    
+            .footer-links h3, .footer-social h3 {
+                font-size: 18px;
+                margin-bottom: 20px;
+                color: white;
+            }
+    
+            .footer-links ul {
+                list-style: none;
+            }
+    
+            .footer-links li {
+                margin-bottom: 10px;
+            }
+    
+            .footer-links a {
+                color: var(--light-gray);
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+    
+            .footer-links a:hover {
+                color: var(--secondary);
+            }
+    
+            .social-icons {
+                display: flex;
+                gap: 15px;
+            }
+    
+            .social-icons a {
+                color: white;
+                background-color: rgba(255, 255, 255, 0.1);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s;
+                text-decoration: none;
+            }
+    
+            .social-icons a:hover {
+                background-color: var(--secondary);
+                transform: translateY(-3px);
+            }
+    
+            .footer-bottom {
+                text-align: center;
+                padding-top: 20px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                color: var(--light-gray);
+                font-size: 14px;
+            }</style>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">BreakThrough <span>Tech Academy</span></div>
+                    <p>Transforming careers through tech education since 2020</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-link">
+                            <img src="webpics/twitter icon.PNG" alt="Twitter">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="webpics/linkedin icon.PNG" alt="LinkedIn">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="webpics/instagram icon.PNG" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BreakThrough Tech Academy. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    
+    <!-- 
+    Name: NASSUUNA NATASHA ANGELLA
+    Registration Number: 23/U/BIT/0523/K/DAY
+    Student Number: MRU2023000523
+    -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact BreakThrough Tech Academy for inquiries about courses, admissions, and tech education opportunities">
+    <title>Contact Us | BreakThrough Tech Academy</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1><a href="index.html" aria-label="BreakThrough Tech Academy Home">BreakThrough Tech Academy</a></h1>
+        </div>
+        <nav aria-label="Main Navigation">
+            <button class="mobile-menu-btn" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">☰</button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact</a></li>
+                <li><a href="#" id="darkModeToggle" aria-label="Toggle dark mode">🌓</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="page-banner" aria-labelledby="page-title">
+            <img src="webpics\webdpic3.PNG" width="50%" height="200px" >
+            <h2 id="page-title">Contact Us</h2>
+            <p>Have questions? We're here to help you on your tech journey</p>
+        </section>
+
+        <section class="contact-container">
+            <div class="contact-info">
+                <div class="info-block">
+                    <h3><span class="icon">📍</span> Visit Us</h3>
+                    <address>
+                        Mapeera Building<br>
+                        Kampala District<br>
+                        Old Kampala Rd, Ug 94105
+                    </address>
+                </div>
+                <div class="info-block">
+                    <h3><span class="icon">✉️</span> Contact Information</h3>
+                    <p>Email: <a href="mailto:info@breakthroughtech.edu">info@breakthroughtech.edu</a><br>
+                    Phone: <a href="tel:+256 700963832">(256) 700963832</a></p>
+                </div>
+                <div class="info-block">
+                    <h3><span class="icon">🕒</span> Office Hours</h3>
+                    <p>Monday - Friday: 9am - 6pm<br>Saturday: 10am - 2pm<br>Sunday: Closed</p>
+                </div>
+                <div class="map-container">
+                    <iframe 
+                        src="about:blank" 
+                        title="BreakThrough Tech Academy Location Map"
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="actual-map">
+                    </iframe>
+                    <div class="map-placeholder">
+                        <p>Interactive Map Coming Soon</p>
+                        <button id="loadMapBtn" class="btn btn-secondary">Load Map</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <h3><span class="icon">✏️</span> Send Us a Message</h3>
+                <form id="contactForm" method="POST" class="contact-form" novalidate aria-labelledby="form-title">
+                    <div class="form-group">
+                        <label for="contactName">Full Name <span class="required">*</span></label>
+                        <input type="text" id="contactName" name="contactName" required aria-required="true" aria-describedby="nameError" autocomplete="name">
+                        <span class="error-message" id="nameError" role="alert"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactEmail">Email Address <span class="required">*</span></label>
+                        <input type="email" id="contactEmail" name="contactEmail" required aria-required="true" aria-describedby="emailError" autocomplete="email">
+                        <span class="error-message" id="emailError" role="alert"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactPhone">Phone Number</label>
+                        <input type="tel" id="contactPhone" name="contactPhone" pattern="[0-9]{3}[-. ]?[0-9]{3}[-. ]?[0-9]{4}" aria-describedby="phoneHint" autocomplete="tel">
+                        <span class="hint-text" id="phoneHint">Format: 123-456-7890 (optional)</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactSubject">Subject <span class="required">*</span></label>
+                        <select id="contactSubject" name="contactSubject" required aria-required="true" aria-describedby="subjectError">
+                            <option value="">Select a subject</option>
+                            <option value="course-inquiry">Course Inquiry</option>
+                            <option value="admission">Admission Questions</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="partnership">Partnership Opportunities</option>
+                            <option value="accessibility">Accessibility Feedback</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="error-message" id="subjectError" role="alert"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="contactMessage">Message <span class="required">*</span></label>
+                        <textarea id="contactMessage" name="contactMessage" rows="5" required aria-required="true" aria-describedby="messageError"></textarea>
+                        <span class="error-message" id="messageError" role="alert"></span>
+                        <div class="character-counter" aria-live="polite"><span id="charCount">0</span>/500 characters</div>
+                    </div>
+                    <fieldset class="form-group preference-group">
+                        <legend>Contact Preferences</legend>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to our newsletter</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="contactConsent" name="contactConsent" required aria-required="true" aria-describedby="consentError">
+                            <label for="contactConsent">I consent to being contacted about my inquiry <span class="required">*</span></label>
+                            <span class="error-message" id="consentError" role="alert"></span>
+                        </div>
+                    </fieldset>
+                    <div class="form-controls">
+                        <button type="reset" class="reset-button">Clear Form</button>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="faq-section" aria-labelledby="faq-title">
+            <h2 id="faq-title">Frequently Asked Questions</h2>
+            <div class="faq-container" id="faqContainer">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">What are the prerequisites for your courses?</button>
+                    <div class="faq-answer">
+                        <p>Most of our beginner courses have no technical prerequisites, just a passion for learning and basic computer literacy. Intermediate and advanced courses may require specific prior knowledge or experience, which is detailed on each course page.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">Do you offer financial aid or payment plans?</button>
+                    <div class="faq-answer">
+                        <p>Yes, we offer various financing options including scholarships, income share agreements, and monthly payment plans. Our admissions team can help you find the best option for your situation.</p>
+                        <a href="#" class="btn btn-secondary">Learn about Financial Aid</a>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">Are the courses online or in-person?</button>
+                    <div class="faq-answer">
+                        <p>We offer both online and in-person options for most courses. Our hybrid model allows you to attend live sessions remotely or at our campus, giving you flexibility while maintaining collaborative learning.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">What kind of job support do you provide?</button>
+                    <div class="faq-answer">
+                        <p>Our career services include resume reviews, portfolio development, interview preparation, networking events with hiring partners, and personalized job search assistance for up to 12 months after graduation.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">Do you offer support for students with disabilities?</button>
+                    <div class="faq-answer">
+                        <p>Absolutely. We are committed to providing an inclusive learning environment for all students. We offer various accommodations and support services for students with disabilities. Please contact our accessibility coordinator at <a href="mailto:accessibility@breakthroughtech.edu">accessibility@breakthroughtech.edu</a> to discuss your specific needs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Ready to start your tech journey?</h2>
+            <p>Browse our courses or schedule a call with an admissions advisor</p>
+            <div class="cta-buttons">
+                <a href="courses.html" class="btn btn-primary">Explore Courses</a>
+                <a href="#" class="btn btn-secondary" id="scheduleCallBtn">Schedule a Call</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <style>/* Footer */
+            footer {
+                background-color: var(--dark);
+                color: white;
+                padding: 60px 0 20px;
+            }
+    
+            .footer-content {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 40px;
+                margin-bottom: 40px;
+            }
+    
+            .footer-logo {
+                font-size: 24px;
+                font-weight: 700;
+                margin-bottom: 20px;
+                color: white;
+            }
+    
+            .footer-logo span {
+                color: var(--secondary);
+            }
+    
+            .footer-about p {
+                margin-bottom: 20px;
+                color: var(--light-gray);
+            }
+    
+            .footer-links h3, .footer-social h3 {
+                font-size: 18px;
+                margin-bottom: 20px;
+                color: white;
+            }
+    
+            .footer-links ul {
+                list-style: none;
+            }
+    
+            .footer-links li {
+                margin-bottom: 10px;
+            }
+    
+            .footer-links a {
+                color: var(--light-gray);
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+    
+            .footer-links a:hover {
+                color: var(--secondary);
+            }
+    
+            .social-icons {
+                display: flex;
+                gap: 15px;
+            }
+    
+            .social-icons a {
+                color: white;
+                background-color: rgba(255, 255, 255, 0.1);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s;
+                text-decoration: none;
+            }
+    
+            .social-icons a:hover {
+                background-color: var(--secondary);
+                transform: translateY(-3px);
+            }
+    
+            .footer-bottom {
+                text-align: center;
+                padding-top: 20px;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                color: var(--light-gray);
+                font-size: 14px;
+            }</style>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">BreakThrough <span>Tech Academy</span></div>
+                    <p>Transforming careers through tech education since 2020</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-link">
+                            <img src="webpics/twitter icon.PNG" alt="Twitter">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="webpics/linkedin icon.PNG" alt="LinkedIn">
+                        </a>
+                        <a href="#" class="social-link">
+                            <img src="webpics/instagram icon.PNG" alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BreakThrough Tech Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="successMessage" aria-hidden="true" role="dialog" aria-labelledby="success-title">
+        <div class="modal-content">
+            <span class="close-button" id="closeSuccess" aria-label="Close">&times;</span>
+            <h3 id="success-title">Thank You!</h3>
+            <p>Your message has been sent successfully. We'll get back to you shortly.</p>
+            <p id="confirmationDetails"></p>
+            <button class="btn btn-primary" id="closeSuccessBtn">Close</button>
+        </div>
+    </div>
+
+    <div class="modal" id="scheduleCallModal" aria-hidden="true" role="dialog" aria-labelledby="schedule-title">
+        <div class="modal-content">
+            <span class="close-button" id="closeSchedule" aria-label="Close">&times;</span>
+            <h3 id="schedule-title">Schedule a Call</h3>
+            <p>Select a date and time that works for you, and one of our admissions advisors will call you.</p>
+            <form id="scheduleForm" class="schedule-form">
+                <div class="form-group">
+                    <label for="scheduleName">Full Name <span class="required">*</span></label>
+                    <input type="text" id="scheduleName" name="scheduleName" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="schedulePhone">Phone Number <span class="required">*</span></label>
+                    <input type="tel" id="schedulePhone" name="schedulePhone" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="scheduleDate">Preferred Date <span class="required">*</span></label>
+                    <input type="date" id="scheduleDate" name="scheduleDate" required aria-required="true" min="">
+                </div>
+                <div class="form-group">
+                    <label for="scheduleTime">Preferred Time <span class="required">*</span></label>
+                    <select id="scheduleTime" name="scheduleTime" required aria-required="true">
+                        <option value="">Select a time</option>
+                        <option value="morning">9:00 AM - 12:00 PM</option>
+                        <option value="afternoon">1:00 PM - 4:00 PM</option>
+                        <option value="evening">5:00 PM - 7:00 PM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="scheduleInterest">I'm interested in learning about:</label>
+                    <select id="scheduleInterest" name="scheduleInterest">
+                        <option value="">Select an option</option>
+                        <option value="web-development">Web Development</option>
+                        <option value="data-science">Data Science</option>
+                        <option value="cybersecurity">Cybersecurity</option>
+                        <option value="ui-ux">UI/UX Design</option>
+                        <option value="general">General Information</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Request</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="back-to-top" id="backToTop" aria-label="Back to top">↑</div>
+
+    <script>
+        // Form validation and interactive elements will be added to script.js
+        // This is a placeholder for immediate functionality
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set min date for schedule form to today
+            const today = new Date().toISOString().split('T')[0];
+            if (document.getElementById('scheduleDate')) {
+                document.getElementById('scheduleDate').min = today;
+            }
+            
+            // Character counter for message
+            const messageField = document.getElementById('contactMessage');
+            const charCount = document.getElementById('charCount');
+            
+            if (messageField && charCount) {
+                messageField.addEventListener('input', function() {
+                    const currentLength = this.value.length;
+                    charCount.textContent = currentLength;
+                    
+                    if (currentLength > 500) {
+                        charCount.classList.add('error');
+                        messageField.classList.add('error-input');
+                    } else {
+                        charCount.classList.remove('error');
+                        messageField.classList.remove('error-input');
+                    }
+                });
+            }
+            
+            // FAQ accordion functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const isExpanded = question.getAttribute('aria-expanded') === 'true';
+                    question.setAttribute('aria-expanded', !isExpanded);
+                    const answer = question.nextElementSibling;
+                    answer.style.display = isExpanded ? 'none' : 'block';
+                });
+            });
+            
+            // Contact form validation
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    let isValid = true;
+                    
+                    // Reset errors
+                    document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
+                    document.querySelectorAll('.error-input').forEach(el => el.classList.remove('error-input'));
+                    
+                    // Validate name
+                    const name = document.getElementById('contactName');
+                    if (!name.value.trim()) {
+                        document.getElementById('nameError').textContent = 'Please enter your name';
+                        name.classList.add('error-input');
+                        isValid = false;
+                    }
+                    
+                    // Validate email
+                    const email = document.getElementById('contactEmail');
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!email.value.trim() || !emailPattern.test(email.value)) {
+                        document.getElementById('emailError').textContent = 'Please enter a valid email address';
+                        email.classList.add('error-input');
+                        isValid = false;
+                    }
+                    
+                    // Validate subject
+                    const subject = document.getElementById('contactSubject');
+                    if (!subject.value) {
+                        document.getElementById('subjectError').textContent = 'Please select a subject';
+                        subject.classList.add('error-input');
+                        isValid = false;
+                    }
+                    
+                    // Validate message
+                    const message = document.getElementById('contactMessage');
+                    if (!message.value.trim()) {
+                        document.getElementById('messageError').textContent = 'Please enter your message';
+                        message.classList.add('error-input');
+                        isValid = false;
+                    } else if (message.value.length > 500) {
+                        document.getElementById('messageError').textContent = 'Message is too long (500 characters maximum)';
+                        message.classList.add('error-input');
+                        isValid = false;
+                    }
+                    
+                    // Validate consent
+                    const consent = document.getElementById('contactConsent');
+                    if (!consent.checked) {
+                        document.getElementById('consentError').textContent = 'You must consent to be contacted';
+                        isValid = false;
+                    }
+                    
+                    if (isValid) {
+                        // Show confirmation details in the success modal
+                        const confirmationDetails = document.getElementById('confirmationDetails');
+                        if (confirmationDetails) {
+                            confirmationDetails.innerHTML = `
+                                <strong>Name:</strong> ${name.value}<br>
+                                <strong>Email:</strong> ${email.value}<br>
+                                <strong>Subject:</strong> ${subject.options[subject.selectedIndex].text}
+                            `;
+                        }
+                        
+                        // Show success message
+                        const successMessage = document.getElementById('successMessage');
+                        if (successMessage) {
+                            successMessage.classList.add('show');
+                            successMessage.setAttribute('aria-hidden', 'false');
+                        }
+                        
+                        // Reset form
+                        contactForm.reset();
+                    }
+                });
+            }
+            
+            // Close success message
+            const closeSuccess = document.getElementById('closeSuccess');
+            const closeSuccessBtn = document.getElementById('closeSuccessBtn');
+            
+            if (closeSuccess) {
+                closeSuccess.addEventListener('click', function() {
+                    const successMessage = document.getElementById('successMessage');
+                    successMessage.classList.remove('show');
+                    successMessage.setAttribute('aria-hidden', 'true');
+                });
+            }
+            
+            if (closeSuccessBtn) {
+                closeSuccessBtn.addEventListener('click', function() {
+                    const successMessage = document.getElementById('successMessage');
+                    successMessage.classList.remove('show');
+                    successMessage.setAttribute('aria-hidden', 'true');
+                });
+            }
+            
+            // Schedule call modal
+            const scheduleCallBtn = document.getElementById('scheduleCallBtn');
+            const scheduleCallModal = document.getElementById('scheduleCallModal');
+            const closeSchedule = document.getElementById('closeSchedule');
+            
+            if (scheduleCallBtn && scheduleCallModal) {
+                scheduleCallBtn.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    scheduleCallModal.classList.add('show');
+                    scheduleCallModal.setAttribute('aria-hidden', 'false');
+                });
+            }
+            
+            if (closeSchedule && scheduleCallModal) {
+                closeSchedule.addEventListener('click', function() {
+                    scheduleCallModal.classList.remove('show');
+                    scheduleCallModal.setAttribute('aria-hidden', 'true');
+                });
+            }
+            
+            // Back to top button
+            const backToTop = document.getElementById('backToTop');
+            if (backToTop) {
+                window.addEventListener('scroll', function() {
+                    if (window.pageYOffset > 300) {
+                        backToTop.classList.add('show');
+                    } else {
+                        backToTop.classList.remove('show');
+                    }
+                });
+                
+                backToTop.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+            
+            // Dark mode toggle
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            if (darkModeToggle) {
+                // Check for saved theme preference or respect OS preference
+                const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+                const savedTheme = localStorage.getItem('theme');
+                
+                if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+                    document.body.classList.add('dark-mode');
+                    darkModeToggle.textContent = '☀️';
+                }
+                
+                darkModeToggle.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    if (document.body.classList.contains('dark-mode')) {
+                        document.body.classList.remove('dark-mode');
+                        localStorage.setItem('theme', 'light');
+                        darkModeToggle.textContent = '🌓';
+                    } else {
+                        document.body.classList.add('dark-mode');
+                        localStorage.setItem('theme', 'dark');
+                        darkModeToggle.textContent = '☀️';
+                    }
+                });
+            }
+            
+            // Load map button
+            const loadMapBtn = document.getElementById('loadMapBtn');
+            if (loadMapBtn) {
+                loadMapBtn.addEventListener('click', function() {
+                    const iframe = document.querySelector('.actual-map');
+                    if (iframe) {
+                        iframe.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0627635982484!2d-122.39611532386704!3d37.78896211388162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085806383265925%3A0x16511e617d31af5b!2sMarket%20St%2C%20San%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1681158306816!5m2!1sen!2sus";
+                        document.querySelector('.map-placeholder').style.display = 'none';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
